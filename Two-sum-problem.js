@@ -12,3 +12,13 @@ twoSum([3, 2, 4], 6) // returns [1, 2] or [2, 1]
 
 
 // Solution
+
+function twoSum(numbers, target) {
+  let seen = new Map();
+  for (let i = 0; i < numbers.length; i++) {
+    let x = numbers[i], y = target - x;
+    if (seen.has(y))
+      return [seen.get(y), i];
+    seen.set(x, i);
+  }
+}
