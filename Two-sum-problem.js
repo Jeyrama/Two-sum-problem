@@ -24,3 +24,13 @@ function twoSum(numbers, target) {
 }
 
 // or
+
+function twoSum(numbers, target) {
+  let tmp, hash = {};
+  numbers.forEach(function(a, i){ hash[a] = i; })
+  
+  for (let i = 0; i < numbers.length; i++){
+    tmp = target - numbers[i];
+    if (typeof hash[tmp] !== 'undefined') return [i, hash[tmp]]
+  }
+}
