@@ -22,3 +22,5 @@ function twoSum(numbers, target) {
     seen.set(x, i);
   }
 }
+
+// or
